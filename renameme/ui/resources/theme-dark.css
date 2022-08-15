@@ -29,6 +29,14 @@ QPlainTextEdit:active,
 QPlainTextEdit:!active  {
     background-color: rgb(91, 91, 91);
 }
+
+QToolTip {
+    color: rgb(239, 239, 239);
+    border: 1px solid rgb(117, 117, 117);
+    padding: 2px;
+    background-color: rgb(66, 66, 66);
+}
+
 QTabWidget::pane {
     background-color: rgb(91, 91, 91);
     border-radius: 2px;
@@ -98,6 +106,26 @@ QAbstractItemView {
     color: rgb(239, 239, 239);
     background-color: rgb(91, 91, 91);
     alternate-background-color: rgb(86, 86, 86);
+    outline: none;
+}
+
+QAbstractItemView::item {
+    padding: 5px;
+}
+
+
+QAbstractItemView::item:focus
+{
+    border: none;
+    border-bottom: 2px solid rgb(239, 239, 239);
+    padding-left: 0px;
+    padding-bottom: 1px;
+}
+
+QListView::item:focus
+{
+    background: transparent;
+    border: none;
 }
 
 QAbstractItemView::item:selected:active {
@@ -142,6 +170,7 @@ QAbstractItemView:disabled,
 QHeaderView::section:disabled {
     color: rgb(167, 167, 167);
 }
+
 QPushButton, QLineEdit {
     color: rgb(239, 239, 239);
     background-color: rgb(91, 91, 91);
@@ -316,7 +345,7 @@ QRadioButton::indicator:disabled {
    border-radius: 6px;
 }
 QSpinBox:disabled {
-  color: rgb(173, 173, 173); 
+  color: rgb(173, 173, 173);
 }
 QComboBox {
     border: none;
@@ -331,12 +360,13 @@ QComboBox::hover {
     background-color: rgb(117, 117, 117);
 }
 
-QComboBox  QListView::item {
+QComboBox > QListView::item {
     height: 25px;
+    border: 1px solid white;
 }
 QMenu {
     background-color: rgb(73, 73, 73);
-   padding: 2px;
+    padding: 2px;
 }
 
 QMenu::item {
@@ -354,7 +384,8 @@ QMenu::separator {
     margin-left: 10px;
     margin-right: 5px;
 }
-QToolBar, 
+
+QToolBar,
 QToolBar > * {
     background: transparent;
     padding: 2px;
